@@ -39,6 +39,7 @@ const BodyContainer = styled.div`
     img {
         object-fit: contain;
         height: 100px;
+        margin-bottom: 5px;
     }
 `;
 

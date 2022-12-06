@@ -2,8 +2,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
 import { Button } from '@material-ui/core';
 import styled from 'styled-components';
-//import { Search } from '@material-ui/icons';
-
+import React from 'react';
 import { useState } from 'react';
 
 const SearchInput = styled.div`
@@ -14,7 +13,6 @@ const SearchInput = styled.div`
     padding: 10px 15px;
     width: 500px;
     margin: 0px auto;
-    margin-top: 40px;
     border-radius: 999px;
     input {
         flex: 1;
@@ -56,12 +54,14 @@ const Search = ({ hide }) => {
             <input value = {input} onChange = {e => setInput(e.target.value)} />
             <MicIcon />
             </SearchInput>
-            {!hide && (
-                <SearchButton>
-                    <Button type = "submit" variant = "outlined">Google Search</Button>
-                    <Button variant = "outlined">I am feeling lucky</Button>
-                </SearchButton>
-            )}
+            {
+                !hide && (
+                    <SearchButton>
+                        <Button type = "submit" variant = "outlined">Google Search</Button>
+                        <Button variant = "outlined">I am feeling lucky</Button>
+                    </SearchButton>
+                )
+            }
         </form>
     )
 };
